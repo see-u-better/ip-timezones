@@ -1,0 +1,36 @@
+{
+    "name": "see-u-better-ip-timezones",
+    "private": true,
+    "engines": {
+        "node": "^18"
+    },
+    "version": "1.0.0",
+    "scripts": {
+        "postinstall": "node setup.js",
+        "setup": "node setup.js",
+        "start": "node app-server.js",
+        "dev": "nodemon app-server.js",
+        "watch": "yarn dev",
+        "test": "jest"
+    },
+    "dependencies": {
+        "decompress": "^4.2.1",
+        "dotenv": "^16.1.0",
+        "express": "^4.18.2",
+        "ip2location-nodejs": "^9.5.0",
+        "needle": "^3.2.0",
+        "nodemon": "^2.0.22",
+        "sqlite3": "^5.1.6"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.1",
+        "jest": "^29.5.0",
+        "supertest": "^6.3.3"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "coveragePathIgnorePatterns": [
+            "/node_modules/"
+        ]
+    }
+}
