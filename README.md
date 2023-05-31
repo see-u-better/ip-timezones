@@ -26,43 +26,43 @@ The endpoints are the following :
 
 
 ### IP details response
-```apache
-HTTP/1.1 GET localhost:9393/api/ip/1.1.1.1
+```http
+GET http://localhost:9393/api/ip/1.1.1.1
 ```
-```json
+```yaml
 {
     data: {
-        ip:	            "1.1.1.1"
-        ipNo:	        "16843009"  // IP in decimal format
-        countryShort:	"US"
-        countryLong:	"United States of America"
+        ip:             "1.1.1.1"
+        ipNo:           "16843009"  // IP in decimal format
+        countryShort:   "US"
+        countryLong:    "United States of America"
         region:	        "California"
-        city:	        "San Jose"
-        zipCode:	    "95101"
-        latitude:	    37.33939
-        longitude:	    -121.894958
-        timeZone:	    "America/Los_Angeles"
+        city:           "San Jose"
+        zipCode:        "95101"
+        latitude:       37.33939
+        longitude:      -121.894958
+        timeZone:       "America/Los_Angeles"
     }
 }
 ```
 
 ### Timezones response
-```apache
-HTTP/1.1 GET localhost:9393/api/timezone
+```http
+GET http://localhost:9393/api/timezone
 ```
-```json
+```yaml
 {
     data: [
         {
-            name	        "Pacific/Midway"
-            country_code	"UM"
+            name            "Pacific/Midway"
+            country_code    "UM"
             dst	            "0"      // Daylight Saving Time
             gmt_offset	    -39600   // Offset to GMT in seconds
         },
         ...,
         {
-            name	        "Europe/Paris"
-            country_code	"FR"
+            name            "Europe/Paris"
+            country_code    "FR"
             dst	            "1"
             gmt_offset	    7200
         },
@@ -72,14 +72,14 @@ HTTP/1.1 GET localhost:9393/api/timezone
 ```
 
 ### Timezone details response
-```apache
-HTTP/1.1 GET localhost:9393/api/timezone/Europe/Paris
+```http
+GET http://localhost:9393/api/timezone/Europe/Paris
 ```
-```json
+```yaml
 {
     data: {
-        name	        "Europe/Paris"
-        country_code	"FR"
+        name            "Europe/Paris"
+        country_code    "FR"
         dst	            "1"
         gmt_offset	    7200
     },
